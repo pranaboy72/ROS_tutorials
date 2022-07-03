@@ -1,4 +1,0 @@
-<launch>
-  <node pkg="turtlesim" type="turtlesim_node" name="turtlesim"/>
-  <node pkg="ros_tutorials" type="cm_publisher" name="cm_publisher"/>
-</launch>
