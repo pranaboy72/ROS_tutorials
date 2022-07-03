@@ -1,0 +1,62 @@
+<robot name='my_robot'>
+<!--..................................Link Definitions..........................................-->
+
+  <link name="base">
+    <visual>
+      <geometry>
+        <box size="2 2 1"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.5"/>
+      <color rgba="0 0 1 1"/>
+    </visual>
+  </link>
+  <link name="link1">
+    <visual>
+      <geometry>
+        <box size="0.5 0.5 3"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 1.5"/>
+      <color rgba="1 0 1 1"/>
+    </visual>
+  </link>
+  <link name="link2">
+    <visual>
+      <geometry>
+        <box size="0.5 0.5 3"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0.5 0 1.5"/>
+      <color rgba="1 1 0 1"/>
+    </visual>
+  </link>
+  <link name="link3">
+    <visual>
+      <geometry>
+        <box size="0.5 0.5 3"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 1.5"/>
+      <color rgba="1 0 0 1"/>
+    </visual>
+  </link>
+
+<!--..................................Joint Definitions..........................................-->
+
+  <joint name="joint0" type="continuous">
+    <parent link="base"/>
+    <child link="link1"/>
+    <origin rpy="0 0 0" xyz="0 0 1"/>
+    <axis xyz="1.0 0.0 0.0"/>
+  </joint>
+  <joint name="joint1" type="continuous">
+    <parent link="link1"/>
+    <child link="link2"/>
+    <origin rpy="0 0 0" xyz="0 0 2.5"/>
+    <axis xyz="1.0 0.0 0.0"/>
+  </joint>
+  <joint name="joint2" type="continuous">
+    <parent link="link2"/>
+    <child link="link3"/>
+    <origin rpy="0 0 0" xyz="0 0 2.5"/>
+    <axis xyz="1.0 0.0 0.0"/>
+  </joint>
+</robot>
+
